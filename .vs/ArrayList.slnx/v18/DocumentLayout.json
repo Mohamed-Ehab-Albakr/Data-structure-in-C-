@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Development\\Repositories\\DataStructures-C-sharp\\ArrayList\\ArrayList\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0FBCB21B-5CBC-46E9-BA93-7AF918937372}|ArrayList\\ArrayList.csproj|c:\\development\\repositories\\datastructures-c-sharp\\arraylist\\arraylist\\arraylist\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FBCB21B-5CBC-46E9-BA93-7AF918937372}|ArrayList\\ArrayList.csproj|solutionrelative:arraylist\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{97D322C8-CE2C-1739-501E-7D4BE7469F9C}|ArrayList\\ArrayList.csproj|c:\\development\\repositories\\datastructures-c-sharp\\arraylist\\arraylist\\arraylist\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97D322C8-CE2C-1739-501E-7D4BE7469F9C}|ArrayList\\ArrayList.csproj|solutionrelative:arraylist\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,21 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Development\\Repositories\\DataStructures-C-sharp\\ArrayList\\ArrayList\\ArrayList\\Program.cs",
-              "RelativeDocumentMoniker": "ArrayList\\Program.cs",
-              "ToolTip": "C:\\Development\\Repositories\\DataStructures-C-sharp\\ArrayList\\ArrayList\\ArrayList\\Program.cs",
-              "RelativeToolTip": "ArrayList\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-09T21:46:57.917Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
@@ -40,6 +27,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Development\\Repositories\\DataStructures-C-sharp\\ArrayList\\ArrayList\\ArrayList\\Program.cs",
+              "RelativeDocumentMoniker": "ArrayList\\Program.cs",
+              "ToolTip": "C:\\Development\\Repositories\\DataStructures-C-sharp\\ArrayList\\ArrayList\\ArrayList\\Program.cs",
+              "RelativeToolTip": "ArrayList\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAA+wAAAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T21:46:57.917Z",
+              "EditorCaption": ""
             }
           ]
         }
