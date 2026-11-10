@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace CustomDataStructures
@@ -11,7 +12,7 @@ namespace CustomDataStructures
         T[] Items;
         int CurrentIndex;
         int Count { set; get; }
-        const int Capacity = 4;
+         int Capacity = 4;
         #endregion
         // default constractour <Size not passed as para > "default array size --> 4 "
         #region constractour
@@ -19,15 +20,36 @@ namespace CustomDataStructures
         {
             Items = new T[Capacity];
             Count = 0;
-            CurrentIndex = 0;
+            CurrentIndex = -1;
         }
         public
             MyArrayList(int init_size)
         {
-            Items = new T[init_size];
-            Count = 0;
-            CurrentIndex = 0;
+            if(init_size >0)
+            {
+                Capacity = init_size;
+                Items = new T[Capacity];
+                Count = 0;
+                CurrentIndex = -1;
+
+            }
+            else
+            {
+                throw new ArgumentException();
+            }
+            
         }
+        public MyArrayList(MyArrayList<T> m )
+        {
+            Items =m.Items ;
+            CurrentIndex = m.CurrentIndex;
+            Count = m.Count;
+            Capacity = (m.Capacity);
+        }
+
+
+
+
         #endregion
         // Indexers creation
         #region indexer
@@ -62,13 +84,41 @@ namespace CustomDataStructures
         }
 
         #endregion
-        // 
+        //Methods
+
+        //Adds a new element to the list
+        //If the array is full, it automatically resizes by doubling its capacity
+        //copies the old elements into the new array, and then adds the new item
+        public void Add(T element)
+        {
+            Count++;
+            CurrentIndex++;
+            if (Count > Capacity) {
+                // Resizing the array create a  new array withv double size in the same object 
+                MyArrayList<T> temp = new MyArrayList<T>(this);
+                Capacity *= 2;
+                Items=new T[Capacity];
 
 
+                for (int i = 0; i < (int)(Capacity) / 2; i++) {
+                    Items[i] = temp.Items[i];
+                }
+                // add the element in the created array \
+                Items[CurrentIndex] = element;
 
 
+                
 
 
+            }
+            else {
+                Items[CurrentIndex] = element;
 
+            }
+                
+
+        }
     }
+
 }
+
