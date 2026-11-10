@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ArrayList
+namespace CustomDataStructures
 {
-    public  class ArrayList<T>
+    public  class MyArrayList<T>
     {
         // phase 1 --> Basic operations 
         T[] Items;
@@ -12,13 +12,14 @@ namespace ArrayList
         public int Count { set; get; }
          const int Capacity = 4;
         // default constractour <Size not passed as para > "default array size --> 4 "
-        public ArrayList()
+        public MyArrayList()
         {
             Items= new T[Capacity];
             Count = 0;
             CurrentIndex = 0;
         }
-        public ArrayList(int init_size)
+        public 
+            MyArrayList(int init_size)
         {
             Items = new T[init_size];
             Count = 0;
