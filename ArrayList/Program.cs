@@ -1,10 +1,12 @@
-﻿filnamespace ArrayList
+﻿namespace ArrayList
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("my inaengjrln!");
+            ArrayList<int> list= new ArrayList<int>(10);
+            Console.WriteLine("i have decalred  this the first array ");
+
 
         }
     }
