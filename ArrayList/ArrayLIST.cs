@@ -25,6 +25,7 @@ namespace CustomDataStructures
             Count = 0;
             CurrentIndex = 0;
         }
+        
 
 
     }
