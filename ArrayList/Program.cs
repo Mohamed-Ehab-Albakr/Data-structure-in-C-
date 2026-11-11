@@ -6,11 +6,16 @@ namespace CustomDataStructures
     {
         static void Main(string[] args)
         {
-            MyArrayList<int> list= new MyArrayList<int>();
-            Console.WriteLine("i have decalred   my  first array ");
-            ArrayList numbers = new ArrayList(4);
-            numbers[0] = 900;
-            numbers[8] = 898;
+           // impelementation test and debug 
+           MyArrayList<int> List=new MyArrayList<int>();// default capacity "4"
+            List.Add(10);// o(1)
+            List.Add(20);
+            List.Add(30);
+            List.Add(40);
+            // creating a new arrat "resizing " 
+            List.Add(50);// o(n)
+            // remove at position 
+            List.RemoveAt(3);
 
 
 

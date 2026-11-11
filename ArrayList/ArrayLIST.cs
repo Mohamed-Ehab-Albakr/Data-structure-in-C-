@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace CustomDataStructures
@@ -127,7 +128,7 @@ namespace CustomDataStructures
         // shift arrat items in the left 
         // remove the  last element o(1) , the first element o(n) "loop shifts all elements"
         // remove from middle o(n)
-        public void RemoveAt(int index )
+        public void RemoveAt(int index ) 
         {
             if (index >= 0 && index < Count)
             {
@@ -145,6 +146,8 @@ namespace CustomDataStructures
             {
                 throw new IndexOutOfRangeException();
             }
+            // Length method
+       
 
 
         }
@@ -155,7 +158,10 @@ namespace CustomDataStructures
 
 
 
-
+        public int Length()
+        {
+            return Count;
+        }
 
 
     }
