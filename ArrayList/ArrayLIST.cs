@@ -85,8 +85,12 @@ namespace CustomDataStructures
 
         #endregion
         //Methods
+        // ------------------------------------------ ADD METHOD-----------------------------------------------------------
 
-        //Adds a new element to the list
+        // add o(1) the adedd element is not the last element in the array
+        // o(n) if it is the last element "beacause the loop iterate on the size of array n "
+
+        //Adds --> check if index valid ,check if the adding is available in the current array  ,add new element to the list
         //If the array is full, it automatically resizes by doubling its capacity
         //copies the old elements into the new array, and then adds the new item
         public void Add(T element)
@@ -118,6 +122,42 @@ namespace CustomDataStructures
                 
 
         }
+        // -------------------------------------REMOVE METHOD-----------------------------------------------------------
+        // check if the index in the valid range 
+        // shift arrat items in the left 
+        // remove the  last element o(1) , the first element o(n) "loop shifts all elements"
+        // remove from middle o(n)
+        public void RemoveAt(int index )
+        {
+            if (index >= 0 && index < Count)
+            {
+              
+              // shift all elements <LEFT SHIFT>
+                for (int i =index;i<Count-1 ;i++)
+                {
+                    Items[i] = Items[i + 1];
+                }
+                Count--;
+                CurrentIndex--;
+                
+            }
+            else
+            {
+                throw new IndexOutOfRangeException();
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+
+
     }
 
 }
