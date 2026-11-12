@@ -146,22 +146,40 @@ namespace CustomDataStructures
             {
                 throw new IndexOutOfRangeException();
             }
-            // Length method
+            
        
-
-
         }
 
-
-
-
-
-
-
+        // length method 
         public int Length()
         {
             return Count;
         }
+        // -------------------------------indexOf method ------------------------------------------
+       
+
+        public int IndexOf(T item)
+        {
+            for (int i = 0; i < Count; i++)
+            {
+                if (EqualityComparer<T>.Default.Equals(Items[i], item))
+                {
+                    // Equlas() impelemented according to the  object or class type 
+                    return i;
+                }
+            }
+
+            return -1;
+        }
+       
+
+
+
+
+       
+        
+
+
 
 
     }

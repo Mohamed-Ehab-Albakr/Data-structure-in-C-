@@ -16,6 +16,8 @@ namespace CustomDataStructures
             List.Add(50);// o(n)
             // remove at position 
             List.RemoveAt(3);
+            
+            
 
 
 
