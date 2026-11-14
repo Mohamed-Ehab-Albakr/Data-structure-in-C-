@@ -14,6 +14,8 @@ namespace CustomDataStructures
         int CurrentIndex;
         int Count { set; get; }
          int Capacity = 4;
+        private  IEqualityComparer<T> comparer;
+
         #endregion
         // default constractour <Size not passed as para > "default array size --> 4 "
         #region constractour
@@ -22,6 +24,7 @@ namespace CustomDataStructures
             Items = new T[Capacity];
             Count = 0;
             CurrentIndex = -1;
+            comparer = EqualityComparer<T>.Default;
         }
         public
             MyArrayList(int init_size)
@@ -32,6 +35,7 @@ namespace CustomDataStructures
                 Items = new T[Capacity];
                 Count = 0;
                 CurrentIndex = -1;
+                comparer = EqualityComparer<T>.Default;
 
             }
             else
@@ -46,6 +50,14 @@ namespace CustomDataStructures
             CurrentIndex = m.CurrentIndex;
             Count = m.Count;
             Capacity = (m.Capacity);
+        }
+        public MyArrayList(IEqualityComparer<T> compare)// interface  refrence as para 
+        {
+            Items = new T[Capacity];
+            Count = 0;
+            CurrentIndex = -1;
+
+            comparer = compare ?? EqualityComparer<T>.Default;
         }
 
 
@@ -162,7 +174,7 @@ namespace CustomDataStructures
         {
             for (int i = 0; i < Count; i++)
             {
-                if (EqualityComparer<T>.Default.Equals(Items[i], item))
+                if (comparer.Equals(Items[i], item))
                 {
                     // Equlas() impelemented according to the  object or class type 
                     return i;
