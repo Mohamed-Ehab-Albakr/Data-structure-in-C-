@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
@@ -150,6 +151,8 @@ namespace CustomDataStructures
                 {
                     Items[i] = Items[i + 1];
                 }
+                Items[CurrentIndex] = default(T);
+
                 Count--;
                 CurrentIndex--;
                 
@@ -198,18 +201,54 @@ namespace CustomDataStructures
                 RemoveAt(index_of_item);
             }
 
+        }
+        // ----------------------------------add range method-------------------------------------------------
+        public void AddRange(T[] elements)
+        {
+            int new_size = elements.Length + Count;
+            if (new_size> Capacity)
+            {
+                // resizing the array 
+                while (new_size> Capacity)
+                {
+                    Capacity *= 2;
+                }
+                T[] temp = Items;
+                Items=new T[Capacity];
+                for (int i =0;i< Count; i++)
+                {
+                    Items[i] = temp[i];
+                }
+                int j = 0;
+                for (int i=CurrentIndex+1;i<new_size; i++)
+                {
+                   
+                    Items[i]=elements[j];
+                    j++;
+                    CurrentIndex++;
+                 
+                }
 
 
+
+            }
+            else
+            {
+                
+                int j = 0;
+                for (int i = CurrentIndex+1; i <new_size ; i++)
+                {
+
+                    Items[i] = elements[j];
+                    j++;
+                    CurrentIndex++;
+               
+                }
+
+            }
+            Count = new_size;
 
         }
-
-
-
-
-
-
-
-
 
 
 
