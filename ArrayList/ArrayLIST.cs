@@ -171,13 +171,32 @@ namespace CustomDataStructures
 
             return -1;
         }
-       
+        // ------------------------------- remove  method ------------------------------------------
+        // you pass an item then if the item found in the list it remove it if not throw an exception 
+        public void  Remove(T item)
+        {
+
+            int index_of_item = IndexOf(item);
+            if (index_of_item == -1)// if the item havent foung in the list 
+            {
+                throw new KeyNotFoundException();
+            }
+            else
+            {
+                RemoveAt(index_of_item);
+            }
 
 
 
 
-       
-        
+        }
+
+
+
+
+
+
+
 
 
 
